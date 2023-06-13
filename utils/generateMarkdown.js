@@ -1,96 +1,111 @@
 // TODO: Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === "MIT") {
-    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
-  }
-  else if (license === "APACHE 2.0") {
-    return `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
-  }
-  else if (license === "GPL 3.0") {
-    return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
-  }
-  else if (license === "BSD 3") {
-    return `![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)`
-  }
-  else if (license === "None") {
-    return ``
+  switch (license) {
+    case "MIT":
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT), `
+      break;
+    case "GPL":
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      break;
+    case "GPL 3.0":
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      break;
+    case "Unlicense":
+      return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+      break;
+    case "None":
+      return ``
+      break;
+    default:
+      return ``
+      break;
   }
 }
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "MIT") {
-    return `https://opensource.org/licenses/MIT`
+  switch (license) {
+      case "MIT":
+        return `https://opensource.org/licenses/MIT`
+        break;
+      case "GPL":
+        return `https://www.gnu.org/licenses/gpl-3.0`
+        break;
+      case "GPL 3.0":
+        return `https://www.gnu.org/licenses/gpl-3.0`
+        break;
+      case "Unlicense":
+        return `https://unlicense.org/`
+        break;
+      case "None":
+        return ``
+        break;
+      default:
+        return ``
+        break;
+    }
   }
-  else if (license === "APACHE 2.0") {
-    return `https://opensource.org/licenses/Apache-2.0`
-  }
-  else if (license === "GPL 3.0") {
-    return `https://www.gnu.org/licenses/gpl-3.0`
-  }
-  else if (license === "BSD 3") {
-    return `https://opensource.org/licenses/BSD-3-Clause`
-  }
-  else if (license === "None") {
-    return ``
-  }
-}
-
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === "MIT") {
-    return `This project is licensed under the MIT license.`
+  switch (license) {
+    case "MIT":
+      return `This project is licensed under the MIT license.`;
+      break;
+    case "GPL":
+      return `This project is licensed under the GNU General Public License v3.0.`;
+      break;
+    case "GPL 3.0":
+      return `This project is licensed under the GNU General Public License v3.0.`;
+      break;
+    case "Unlicense":
+      return `This project is licensed under the Unlicense.`;
+      break;
+    case "None":
+      return ``
+      break;
+    default:
+      return ``
+      break;
   }
-  else if (license === "APACHE 2.0") {
-    return `This project is licensed under the Apache 2.0 license.`
-  }
-  {
-    if (license === "GPL 3.0") {
-      return `This project is licensed under the GPL v3 license.`
-    }
-    else if (license === "BSD 3") {
-      return `This project is licensed under the BSD 3 license.`
-    }
-    {
-      if (license === "None") {
-        return ``
-      }
-    }
-  }
-  console.log(license);
 }
-// Generate markdown for README
-function generateMarkdown(data) {
-  console.log(data);
-  return `# ${data.title}
-  ## Description
+
+  console.log(renderLicenseBadge('MIT'));
+  console.log(renderLicenseLink('MIT'));
+  console.log(renderLicenseSection('MIT'));
+
+
+
+  // Generate markdown for README
+  function generateMarkdown(data) {
+    console.log(data);
+    return `#  ${data.projectName} 📌
+  ##  Description 📈
   ${data.description}
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Contribution](#contribution)
-  * [Tests](#tests)
-  * [Questions](#questions)
+  ## Table of Contents 📓
+  1️⃣ [Installation](#installation) 💻 <br>
+  2️⃣ [Usage](#usage) 📎 <br>
+  3️⃣ [License](#license) 📂 <br>
+  4️⃣ [Contributions](#contributions) 🔍 <br>
+  5️⃣ [Tests](#tests) ⌛ <br>
+  6️⃣ [Questions](#questions) ☎️💻📱 <br>
 
-  ##Installation
+  ## Installation 💻
   ${data.installation}
-  ## Usage
+  ## Usage 📎
   ${data.usage}
-  ## License
+  ## License 📂
   ${data.license}
-  ## Contribution
-  ${data.contribution}
-  ## Tests
+  ## Contributions 🔍
+  ${data.contributions}
+  ## Tests ⌛
   ${data.tests}
-  ## Questions
-  If you have any questions regarding to the repo, open an issue or contact me directly at [${data.email}}(mailto:$(data.email)). Find more of my work at [${data.github}](https://github.com/${data.username}).
+  ## Questions ☎️💻📱
+  If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. You can find more of my work at 🔖 [${data.userName}](https://github.com/${data.userName}/) 🔖. 
   `;
-}
-
-module.exports = generateMarkdown;
+  }
+  module.exports = generateMarkdown;
 
 
 
