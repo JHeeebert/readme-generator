@@ -25,7 +25,8 @@ function generateMarkdown(data) {
   If you have any questions regarding to the repo, open an issue or contact me directly at [${data.email}}(mailto:$(data.email)). Find more of my work at [${data.github}](https://github.com/${data.username}).
   `;
 }
-module.exports = generateMarkdown;
+
+export default generateMarkdown;
 
 
 // // TODO: Create a function that returns a license badge based on which license is passed in
