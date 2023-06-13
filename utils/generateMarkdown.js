@@ -1,7 +1,7 @@
 // TODO: Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === "MIT") {  
+  if (license === "MIT") {
     return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
   }
   else if (license === "APACHE 2.0") {
@@ -16,12 +16,12 @@ function renderLicenseBadge(license) {
   else if (license === "None") {
     return ``
   }
- }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "MIT") {  
+  if (license === "MIT") {
     return `https://opensource.org/licenses/MIT`
   }
   else if (license === "APACHE 2.0") {
@@ -36,7 +36,7 @@ function renderLicenseLink(license) {
   else if (license === "None") {
     return ``
   }
- }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -53,18 +53,20 @@ function renderLicenseSection(license) {
     }
     else if (license === "BSD 3") {
       return `This project is licensed under the BSD 3 license.`
-  }
-  {
-    if (license === "None") {
-      return ``
+    }
+    {
+      if (license === "None") {
+        return ``
+      }
     }
   }
-  }
- }
+  console.log(license);
+}
 // Generate markdown for README
 function generateMarkdown(data) {
+  console.log(data);
   return `# ${data.title}
-    ## Description
+  ## Description
   ${data.description}
   ## Table of Contents
   * [Installation](#installation)
@@ -92,3 +94,12 @@ module.exports = generateMarkdown;
 
 
 
+// [![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+// [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
+// [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
+// [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
+// [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
+// [![GitLab issues open](https://badgen.net/gitlab/open-issues/gitlab-org/gitlab-runner)](https://gitlab.com/gitlab-org/gitlab-runner)
+// [![GitLab latest release](https://badgen.net/gitlab/release/NickBusey/HomelabOS/)](https://gitlab.com/NickBusey/HomelabOS/-/releases)
+// [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+// [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)

@@ -1,15 +1,16 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "FuzzWD",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
   },
   "keywords": [],
-  "description": ""
+  "description": "A professional README.md generator",
+  "devDependencies": {}
 }
