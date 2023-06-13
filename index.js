@@ -46,7 +46,7 @@ const questions = [
         message: 'Provide examples on how to run tests:'
     },
     {
-      type: 'list',
+        type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
@@ -59,24 +59,21 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         }
-        console.log('Success!');
+        console.log('README created successfully!');
     });
 }
 
 // TODO: Create a function to initialize app
 function init() {
+    console.log(`
+    ==================
+    Welcome to the README generator! Please answer the following questions:
+    ==================`);
+
     inquirer.prompt(questions)
         .then(answers => {
             writeToFile('README.md', generateMarkdown(answers));
         });
 }
-
-// Function call to initialize program
-function init() {
-    inquirer.prompt(questions)
-        .then(answers => {
-            writeToFile('README.md', generateMarkdown(answers));
-        });
-};
 // Function call to initialize app
 init();
