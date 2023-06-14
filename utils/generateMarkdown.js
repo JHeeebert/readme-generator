@@ -26,26 +26,26 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch (license) {
-      case "MIT":
-        return `https://opensource.org/licenses/MIT`
-        break;
-      case "GPL":
-        return `https://www.gnu.org/licenses/gpl-3.0`
-        break;
-      case "GPL 3.0":
-        return `https://www.gnu.org/licenses/gpl-3.0`
-        break;
-      case "Unlicense":
-        return `https://unlicense.org/`
-        break;
-      case "None":
-        return ``
-        break;
-      default:
-        return ``
-        break;
-    }
+    case "MIT":
+      return `https://opensource.org/licenses/MIT`
+      break;
+    case "GPL":
+      return `https://www.gnu.org/licenses/gpl-3.0`
+      break;
+    case "GPL 3.0":
+      return `https://www.gnu.org/licenses/gpl-3.0`
+      break;
+    case "Unlicense":
+      return `https://unlicense.org/`
+      break;
+    case "None":
+      return ``
+      break;
+    default:
+      return ``
+      break;
   }
+}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
@@ -69,24 +69,23 @@ function renderLicenseSection(license) {
       return ``
       break;
   }
+  console.log(license);
+  console.log(renderLicenseSection(license));
+  console.log(renderLicenseLink(license));
+  console.log(renderLicenseBadge(license));
 }
 
-  console.log(renderLicenseBadge('MIT'));
-  console.log(renderLicenseLink('MIT'));
-  console.log(renderLicenseSection('MIT'));
-
-
-
-  // Generate markdown for README
-  function generateMarkdown(data) {
-    console.log(data);
-    return `#  ${data.projectName} 📌
+// Generate markdown for README
+function generateMarkdown(data) {
+  console.log(data);
+  return `#  ${data.projectName} 📌
   ##  Description 📈
   ${data.description}
   ## Table of Contents 📓
   1️⃣ [Installation](#installation) 💻 <br>
   2️⃣ [Usage](#usage) 📎 <br>
-  3️⃣ [License](#license) 📂 <br>
+  3️⃣ [License](#license)
+      ${data.license} 📂 <br>
   4️⃣ [Contributions](#contributions) 🔍 <br>
   5️⃣ [Tests](#tests) ⌛ <br>
   6️⃣ [Questions](#questions) ☎️💻📱 <br>
@@ -104,8 +103,8 @@ function renderLicenseSection(license) {
   ## Questions ☎️💻📱
   If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. You can find more of my work at 🔖 [${data.userName}](https://github.com/${data.userName}/) 🔖. 
   `;
-  }
-  module.exports = generateMarkdown;
+}
+module.exports = generateMarkdown;
 
 
 
