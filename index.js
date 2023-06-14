@@ -37,7 +37,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contributions',
+        name: 'contributing',
         message: 'What are the steps required to contribute to your project?'
     },
     {

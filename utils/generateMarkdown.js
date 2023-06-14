@@ -74,7 +74,8 @@ function renderLicenseSection(license) {
 // Generate markdown for README.md
 function generateMarkdown(data) {
   console.log(data);
-  return `#  ${data.projectName} 📌
+  return `
+  #  ${data.projectName} 📌
   ##  Description 📈
   [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
   [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
@@ -86,7 +87,7 @@ function generateMarkdown(data) {
   1️⃣ [Installation](#installation) 💻 <br>
   2️⃣ [Usage](#usage) 📎 <br>
   3️⃣ [License](#license) 📂 <br>
-  4️⃣ [Contributions](#contributions) 🔍 <br>
+  4️⃣ [Contributing](#contributing) 🔍 <br>
   5️⃣ [Tests](#tests) ⌛ <br>
   6️⃣ [Questions](#questions) ☎️💻📱 <br>
   ## Installation 💻
@@ -97,10 +98,15 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)} <br> 
   ${renderLicenseLink(data.license)} <br> 
   ${renderLicenseBadge(data.license)} 
-  ## Contributions 🔍
+  ## Contributing 🔍
   [Contributors Covenant](https://www.contributor-covenant.org/) <br>
-  ${data.contributions}
+  [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Jheeebert/readme-generator)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Jheeebert/readme-generator)
+  <br>
+  ${data.contributing}
   ## Tests ⌛
+  [![GitHub commits](https://badgen.net/github/commits/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
+  [![GitHub latest commit](https://badgen.net/github/last-commit/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
+  [![GitHub forks](https://img.shields.io/github/forks/Jheeebert/readme-generator.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Jheeebert/readme-generator/network/)<br>
   ${data.tests}
   ## Questions ☎️💻📱
   If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. <br>
