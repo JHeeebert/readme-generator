@@ -1,4 +1,4 @@
-// TODO: Function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
       return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT), `
       break;
     case "GPL":
-      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      return `[![GPL license](https://img.shields.io/badge/License-GPL-blue.svg)](http://perso.crans.org/besson/LICENSE.html)`
       break;
     case "GPL 3.0":
       return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
@@ -22,7 +22,7 @@ function renderLicenseBadge(license) {
       break;
   }
 }
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch (license) {
@@ -30,7 +30,7 @@ function renderLicenseLink(license) {
       return `https://opensource.org/licenses/MIT`
       break;
     case "GPL":
-      return `https://www.gnu.org/licenses/gpl-3.0`
+      return `https://www.gnu.org/licenses/gpl-2.0`
       break;
     case "GPL 3.0":
       return `https://www.gnu.org/licenses/gpl-3.0`
@@ -46,7 +46,7 @@ function renderLicenseLink(license) {
       break;
   }
 }
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   switch (license) {
@@ -54,7 +54,7 @@ function renderLicenseSection(license) {
       return `This project is licensed under the MIT license.`;
       break;
     case "GPL":
-      return `This project is licensed under the GNU General Public License v3.0.`;
+      return `This project is licensed under the GNU General Public License v2.0.`;
       break;
     case "GPL 3.0":
       return `This project is licensed under the GNU General Public License v3.0.`;
@@ -69,51 +69,42 @@ function renderLicenseSection(license) {
       return ``
       break;
   }
-  console.log(license);
-  console.log(renderLicenseSection(license));
-  console.log(renderLicenseLink(license));
-  console.log(renderLicenseBadge(license));
 }
 
-// Generate markdown for README
+// Generate markdown for README.md
 function generateMarkdown(data) {
   console.log(data);
   return `#  ${data.projectName} 📌
   ##  Description 📈
-  ${data.description}
+  [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
+  [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
+  [![npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
+  [![JavaScript](https://badgen.net/badge/icon/javascript?icon=javascript&label)](https://www.javascript.com/)
+  [![Node.js](https://badgen.net/badge/icon/nodejs?icon=nodejs&label)](https://nodejs.org/) <br>
+  ${data.description} 
   ## Table of Contents 📓
   1️⃣ [Installation](#installation) 💻 <br>
   2️⃣ [Usage](#usage) 📎 <br>
-  3️⃣ [License](#license)
-      ${data.license} 📂 <br>
+  3️⃣ [License](#license) 📂 <br>
   4️⃣ [Contributions](#contributions) 🔍 <br>
   5️⃣ [Tests](#tests) ⌛ <br>
   6️⃣ [Questions](#questions) ☎️💻📱 <br>
-
   ## Installation 💻
   ${data.installation}
   ## Usage 📎
   ${data.usage}
   ## License 📂
-  ${data.license}
+  ${renderLicenseSection(data.license)} <br> 
+  ${renderLicenseLink(data.license)} <br> 
+  ${renderLicenseBadge(data.license)} 
   ## Contributions 🔍
+  [Contributors Covenant](https://www.contributor-covenant.org/) <br>
   ${data.contributions}
   ## Tests ⌛
   ${data.tests}
   ## Questions ☎️💻📱
-  If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. You can find more of my work at 🔖 [${data.userName}](https://github.com/${data.userName}/) 🔖. 
+  If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. <br>
+  You can find more of my work at 🔖 [${data.userName}](https://github.com/${data.userName}/) 🔖. 
   `;
 }
 module.exports = generateMarkdown;
-
-
-
-// [![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
-// [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
-// [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
-// [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
-// [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-// [![GitLab issues open](https://badgen.net/gitlab/open-issues/gitlab-org/gitlab-runner)](https://gitlab.com/gitlab-org/gitlab-runner)
-// [![GitLab latest release](https://badgen.net/gitlab/release/NickBusey/HomelabOS/)](https://gitlab.com/NickBusey/HomelabOS/-/releases)
-// [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-// [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
