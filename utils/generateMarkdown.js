@@ -70,8 +70,9 @@ function renderLicenseSection(license) {
       break;
   }
 }
-const gifImage = (relativePath) =>
-  relativePath ? `![Gif Image](${relativePath})` : '';
+// Function to generate gif image for README.md
+const usagePreview = (relativePath) =>
+  relativePath ? `![Usage Preview](${relativePath})` : '';
 
 // Generate markdown for README.md
 function generateMarkdown(data) {
@@ -96,7 +97,7 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage 📎
   ${data.usage}
-  ${gifImage(data.gifImage)}
+  ${usagePreview(data.gifImage)}
   ## License 📂
   ${renderLicenseSection(data.license)} <br> 
   ${renderLicenseLink(data.license)} <br> 

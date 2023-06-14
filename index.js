@@ -1,4 +1,4 @@
-// Packages needed for this application
+// Packages needed for this application and the generateMarkdown function
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
@@ -33,19 +33,19 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use:'
+        message: 'Provide instructions and examples for usage:'
     },
     {
         type: 'confirm',
-        name: 'gifImage',
-        message: 'Would you like to include a gif image?',
+        name: 'usagePreview',
+        message: 'Would you like to include a video or image to display how your app performs?',
         default: false
     },
     {
         type: 'input',
-        name: 'gifPath',
-        message: 'Please provide the relative path to your gif image "DO NOT USE SPACES IN YOUR FILE NAME":',
-        when: (answers) => answers.gifImage === true ? true : false,
+        name: 'usagePath',
+        message: 'Please provide the relative path to your usage video or image "DO NOT USE SPACES IN YOUR FILE NAME":',
+        when: (answers) => answers.usagePreview === true ? true : false,
         default: ''
     },
     {
@@ -76,7 +76,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     console.log(`
     ==================
