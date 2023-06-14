@@ -18,10 +18,11 @@
   
   ## Usage 📎
   
+  ![Gif Image](true)
   ## License 📂
-  This project is licensed under the MIT license. <br> 
-  https://opensource.org/licenses/MIT <br> 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT),  
+  This project is licensed under the GNU General Public License v3.0. <br> 
+  https://www.gnu.org/licenses/gpl-3.0 <br> 
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
   ## Contributing 🔍
   [Contributors Covenant](https://www.contributor-covenant.org/) <br>
   [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Jheeebert/readme-generator)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Jheeebert/readme-generator)

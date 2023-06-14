@@ -36,6 +36,19 @@ const questions = [
         message: 'Provide instructions and examples for use:'
     },
     {
+        type: 'confirm',
+        name: 'gifImage',
+        message: 'Would you like to include a gif image?',
+        default: false
+    },
+    {
+        type: 'input',
+        name: 'gifPath',
+        message: 'Please provide the relative path to your gif image "DO NOT USE SPACES IN YOUR FILE NAME":',
+        when: (answers) => answers.gifImage === true ? true : false,
+        default: ''
+    },
+    {
         type: 'input',
         name: 'contributing',
         message: 'What are the steps required to contribute to your project?'
@@ -49,16 +62,18 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
-        choices: ['MIT', 'GPL', 'GPL 3.0', 'Unlicense', 'None']
+        choices: ['MIT', 'GPL', 'GPL 3.0', 'Unlicense', 'None'],
+        default: 'None'
     }
 ];
 
 // Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
-        if (err) return console.log(err);{
-        console.log('README created successfully!');
-    }});
+        if (err) return console.log(err); {
+            console.log('README created successfully!');
+        }
+    });
 }
 
 // TODO: Create a function to initialize app
@@ -68,9 +83,9 @@ function init() {
     Welcome to the README generator! Please answer the following questions:
     ==================`)
     inquirer.prompt(questions)
-    .then((data) => {
-          writeToFile('README.md', generateMarkdown(data));
-      }); 
+        .then((data) => {
+            writeToFile('README.md', generateMarkdown(data));
+        });
 }
 // Function call to initialize app
 init();

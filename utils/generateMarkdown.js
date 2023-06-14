@@ -70,6 +70,8 @@ function renderLicenseSection(license) {
       break;
   }
 }
+const gifImage = (relativePath) =>
+  relativePath ? `![Gif Image](${relativePath})` : '';
 
 // Generate markdown for README.md
 function generateMarkdown(data) {
@@ -94,6 +96,7 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage 📎
   ${data.usage}
+  ${gifImage(data.gifImage)}
   ## License 📂
   ${renderLicenseSection(data.license)} <br> 
   ${renderLicenseLink(data.license)} <br> 
