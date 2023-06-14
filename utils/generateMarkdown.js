@@ -85,6 +85,7 @@ function generateMarkdown(data) {
   [![npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
   [![JavaScript](https://badgen.net/badge/icon/javascript?icon=javascript&label)](https://www.javascript.com/)
   [![Node.js](https://badgen.net/badge/icon/nodejs?icon=nodejs&label)](https://nodejs.org/) <br>
+  
   ${data.description} 
   ## Table of Contents 📓
   1️⃣ [Installation](#installation) 💻 <br>
