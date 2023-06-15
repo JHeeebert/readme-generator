@@ -11,9 +11,9 @@ function renderLicenseBadge(license) {
     case "Unlicense":
       return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
     case "None":
-      return ``
+      return `NO LICENSE BADGE PROVIDED`
     default:
-      return ``
+      return `NO LICENSE BADGE FOUND`
   }
 }
 // Function that returns the license link
@@ -29,9 +29,9 @@ function renderLicenseLink(license) {
     case "Unlicense":
       return `https://unlicense.org/`
     case "None":
-      return ``
+      return `NO LICENSE LINK PROVIDED`
     default:
-      return ``
+      return `NO LICENSE LINK FOUND`
   }
 }
 // Function that returns the license section of README
@@ -47,9 +47,9 @@ function renderLicenseSection(license) {
     case "Unlicense":
       return `This project is licensed under the Unlicense.`;
     case "None":
-      return ``
+      return `NO LICENSE PROVIDED`;
     default:
-      return ``
+      return `NO LICENSE FOUND`;
   }
 }
 // Function to generate gif image for README.md
@@ -72,23 +72,30 @@ function generateMarkdown(data) {
   5️⃣ [Contributing](#contributing) 🔍 <br>
   6️⃣ [Tests](#tests) ⌛ <br>
   7️⃣ [Questions](#questions) ☎️💻📱 <br>
+
   ## Installation 💻
   ${data.installation}
+
   ## Usage 📎
   ${data.usage} <br>
   ${usagePreview(data.gifImage)}
+
   ## License 📂
   ${renderLicenseSection(data.license)} <br> 
   ${renderLicenseLink(data.license)} <br> 
   ${renderLicenseBadge(data.license)} 
+
   ## Badges 🛡️
+
   ## Contributing 🔍
   [Contributors Covenant](https://www.contributor-covenant.org/) <br>
   <br>
   ${data.contributing}
+
   ## Tests ⌛
   <br>
   ${data.tests}
+
   ## Questions ☎️💻📱
   If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. <br>
   You can find more of my work at 🔖 [${data.userName}](https://github.com/${data.userName}/) 🔖. 

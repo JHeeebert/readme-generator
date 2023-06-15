@@ -8,32 +8,39 @@ const questions = [
     {
         type: 'input',
         name: 'userName',
-        message: 'What is your GitHub username?'
+        message: 'What is your GitHub username?',
+        default: `YOUR GITHUB USERNAME`
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?'
+        message: 'What is your email address?',
+        default: `YOUR EMAIL ADDRESS`
     },
     {
         type: 'input',
         name: 'projectName',
-        message: 'What is your project\'s name?'
+        message: 'What is your project\'s name?',
+        default: `YOUR PROJECT NAME`
+
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a short description of your project:'
+        message: 'Please write a short description of your project:',
+        default: 'THIS IS A PROJECT DESCRIPTION'
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install your project?'
+        message: 'What are the steps required to install your project?',
+        default: `NPM INSTALL OR NPM I`
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for usage:'
+        message: 'Provide instructions and examples for usage:',
+        default: `NODE INDEX.JS OR NPM START`
     },
     {
         type: 'confirm',
@@ -46,17 +53,19 @@ const questions = [
         name: 'usagePath',
         message: 'Please provide the relative path to your usage video or image "DO NOT USE SPACES IN YOUR FILE NAME":',
         when: (answers) => answers.usagePreview === true ? true : false,
-        default: ''
+        default: 'THIS IS A PATH'
     },
     {
         type: 'input',
         name: 'contributing',
-        message: 'What are the steps required to contribute to your project?'
+        message: 'What are the steps required to contribute to your project?',
+        default: `FORK THE REPO AND CREATE A PULL REQUEST OR OPEN AN ISSUE ON THE GITHUB REPO PAGE AND I WILL ADDRESS IT ASAP`
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Provide examples on how to run tests:'
+        message: 'Provide examples on how to run tests:',
+        default: `NPM TEST`
     },
     {
         type: 'list',
@@ -65,7 +74,7 @@ const questions = [
         choices: ['MIT', 'GPL', 'GPL 3.0', 'Unlicense', 'None'],
         default: 'None'
     }
-]; 
+];
 
 // Function to write README file
 function writeToFile(fileName, data) {

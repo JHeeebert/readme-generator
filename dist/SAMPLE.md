@@ -16,7 +16,7 @@
   ## License 📂
    <br> 
    <br> 
-   
+
   ## Badges 🛡️
   [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
   [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
@@ -28,6 +28,7 @@
   [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Jheeebert/readme-generator)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Jheeebert/readme-generator)
   <br>
   add branch and wait for review
+  
   ## Tests ⌛
   [![GitHub commits](https://badgen.net/github/commits/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
   [![GitHub latest commit](https://badgen.net/github/last-commit/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
