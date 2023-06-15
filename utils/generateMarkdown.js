@@ -39,17 +39,47 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   switch (license) {
     case "MIT":
-      return `This project is licensed under the MIT license.`;
+      return `This project is licensed under the MIT license.`
     case "GPL":
-      return `This project is licensed under the GNU General Public License v2.0.`;
+      return `This project is licensed under the GNU General Public License v2.0.`
     case "GPL 3.0":
-      return `This project is licensed under the GNU General Public License v3.0.`;
+      return `This project is licensed under the GNU General Public License v3.0.`
     case "Unlicense":
-      return `This project is licensed under the Unlicense.`;
+      return `This project is licensed under the Unlicense.`
     case "None":
-      return `NO LICENSE PROVIDED`;
+      return `NO LICENSE PROVIDED`
     default:
-      return `NO LICENSE FOUND`;
+      return `NO LICENSE FOUND`
+  }
+}
+// Function that returns additional badges
+// If there are no badges, return an empty string
+function renderAdditionalBadges(Badges) {
+  switch (Badges) {
+    case "JavaScript":
+      return `[![Generic badge](https://img.shields.io/badge/JavaScript-ES6-yellow.svg)](https://shields.io/)`
+    case "Node.js":
+      return `[![Generic badge](https://img.shields.io/badge/Node.js-ES6-green.svg)](https://shields.io/)`
+    case "HTML":
+      return `[![Generic badge](https://img.shields.io/badge/HTML-5-orange.svg)](https://shields.io/)`
+    case "CSS":
+      return `[![Generic badge](https://img.shields.io/badge/CSS-3-blue.svg)](https://shields.io/)`
+    case "jQuery":
+      return `[![Generic badge](https://img.shields.io/badge/jQuery-3.5.1-blue.svg)](https://shields.io/)`
+    case "Bootstrap":
+      return `[![Generic badge](https://img.shields.io/badge/Bootstrap-4.5.0-purple.svg)](https://shields.io/)`
+    case "React":
+      return `[![Generic badge](https://img.shields.io/badge/React-16.13.1-blue.svg)](https://shields.io/)`
+    case "GitHub":
+      return `[![Generic badge](https://img.shields.io/badge/GitHub-16.13.1-black.svg)](https://shields.io/)`
+    case "npm":
+      return `[![Generic badge](https://img.shields.io/badge/npm-6.14.5-red.svg)](https://shields.io/)`
+    case "Express.js":
+      return `[![Generic badge](https://img.shields.io/badge/Express.js-4.17.1-blue.svg)](https://shields.io/)`
+    case "None":
+      return `NO ADDITIONAL BADGES PROVIDED`
+    default:
+      return `NO ADDITIONAL BADGES FOUND`
   }
 }
 // Function to generate gif image for README.md

@@ -1,8 +1,7 @@
-// // Packages needed for this application and the generateMarkdown function
+// Packages needed for this application and the generateMarkdown function
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-
 // Array of questions for user input
 const questions = [
     {
@@ -73,8 +72,10 @@ const questions = [
         message: 'What kind of license should your project have?',
         choices: ['MIT', 'GPL', 'GPL 3.0', 'Unlicense', 'None'],
         default: 'None'
-    }
+    },
 ];
+
+
 
 // Function to write README file
 function writeToFile(fileName, data) {

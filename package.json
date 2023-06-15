@@ -8,9 +8,9 @@
   "author": "FuzzWD",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "inquirer-table-multiselect": "^1.0.0"
   },
   "keywords": [],
-  "description": "A professional README.md generator",
-  "devDependencies": {}
+  "description": "A professional README.md generator"
 }
