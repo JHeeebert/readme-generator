@@ -80,11 +80,6 @@ function generateMarkdown(data) {
   return `
   # ${data.projectName} 📌
   ## Description 📈
-  [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-  [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
-  [![npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
-  [![JavaScript](https://badgen.net/badge/icon/javascript?icon=javascript&label)](https://www.javascript.com/)
-  [![Node.js](https://badgen.net/badge/icon/nodejs?icon=nodejs&label)](https://nodejs.org/) <br>
   ${data.description} 
   ## Table of Contents 📓
   1️⃣ [Installation](#installation) 💻 <br>
@@ -102,6 +97,12 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)} <br> 
   ${renderLicenseLink(data.license)} <br> 
   ${renderLicenseBadge(data.license)} 
+  ## Badges 🛡️
+  [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
+  [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
+  [![npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
+  [![JavaScript](https://badgen.net/badge/icon/javascript?icon=javascript&label)](https://www.javascript.com/)
+  [![Node.js](https://badgen.net/badge/icon/nodejs?icon=nodejs&label)](https://nodejs.org/) <br>
   ## Contributing 🔍
   [Contributors Covenant](https://www.contributor-covenant.org/) <br>
   [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Jheeebert/readme-generator)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Jheeebert/readme-generator)
