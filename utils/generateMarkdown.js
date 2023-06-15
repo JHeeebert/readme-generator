@@ -85,9 +85,10 @@ function generateMarkdown(data) {
   1️⃣ [Installation](#installation) 💻 <br>
   2️⃣ [Usage](#usage) 📎 <br>
   3️⃣ [License](#license) 📂 <br>
-  4️⃣ [Contributing](#contributing) 🔍 <br>
-  5️⃣ [Tests](#tests) ⌛ <br>
-  6️⃣ [Questions](#questions) ☎️💻📱 <br>
+  4️⃣ [Badges](#badges) 🛡️ <br>
+  5️⃣ [Contributing](#contributing) 🔍 <br>
+  6️⃣ [Tests](#tests) ⌛ <br>
+  7️⃣ [Questions](#questions) ☎️💻📱 <br>
   ## Installation 💻
   ${data.installation}
   ## Usage 📎
