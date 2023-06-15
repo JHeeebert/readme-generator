@@ -1,5 +1,5 @@
-// Function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// //Function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -78,14 +78,13 @@ const usagePreview = (relativePath) =>
 function generateMarkdown(data) {
   console.log(data);
   return `
-  #  ${data.projectName} 📌
-  ##  Description 📈
+  # ${data.projectName} 📌
+  ## Description 📈
   [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
   [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
   [![npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
   [![JavaScript](https://badgen.net/badge/icon/javascript?icon=javascript&label)](https://www.javascript.com/)
   [![Node.js](https://badgen.net/badge/icon/nodejs?icon=nodejs&label)](https://nodejs.org/) <br>
-  
   ${data.description} 
   ## Table of Contents 📓
   1️⃣ [Installation](#installation) 💻 <br>
@@ -111,7 +110,8 @@ function generateMarkdown(data) {
   ## Tests ⌛
   [![GitHub commits](https://badgen.net/github/commits/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
   [![GitHub latest commit](https://badgen.net/github/last-commit/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
-  [![GitHub forks](https://img.shields.io/github/forks/Jheeebert/readme-generator.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Jheeebert/readme-generator/network/)<br>
+  [![GitHub forks](https://img.shields.io/github/forks/Jheeebert/readme-generator.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Jheeebert/readme-generator/network/)
+  <br>
   ${data.tests}
   ## Questions ☎️💻📱
   If you have any questions about the repo, open an issue or contact me directly at 📧 ${data.email} 📧. <br>
