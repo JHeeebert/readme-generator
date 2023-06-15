@@ -73,9 +73,16 @@ const questions = [
         choices: ['MIT', 'GPL', 'GPL 3.0', 'Unlicense', 'None'],
         default: 'None'
     },
+    {
+        type: 'list-multiple',
+        name: 'badges',
+        message: 'What badges would you like to include?',
+        choices: ['Node', 'NPM', 'Javascript', 'ES6', 'jQuery', 'Bootstrap', 'HTML', 'CSS', 'React', 'Express.js', "inquirer", "None" ],
+        multiple: true,
+    },
 ];
 
-
+        
 
 // Function to write README file
 function writeToFile(fileName, data) {
@@ -94,9 +101,9 @@ function init() {
     ==================`)
     inquirer.prompt(questions)
         .then((data) => {
-            writeToFile('README.md', generateMarkdown(data));
+            writeToFile('NEWREADME.md', generateMarkdown(data));
         });
-}
+    }      
 // Function call to initialize app
 init();
 
