@@ -65,7 +65,7 @@ const questions = [
         choices: ['MIT', 'GPL', 'GPL 3.0', 'Unlicense', 'None'],
         default: 'None'
     }
-];
+]; 
 
 // Function to write README file
 function writeToFile(fileName, data) {

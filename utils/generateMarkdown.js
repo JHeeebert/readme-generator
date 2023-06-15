@@ -92,7 +92,7 @@ function generateMarkdown(data) {
   ## Installation 💻
   ${data.installation}
   ## Usage 📎
-  ${data.usage}
+  ${data.usage} <br>
   ${usagePreview(data.gifImage)}
   ## License 📂
   ${renderLicenseSection(data.license)} <br> 
