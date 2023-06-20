@@ -34,6 +34,10 @@
   [![GitHub latest commit](https://badgen.net/github/last-commit/Jheeebert/readme-generator)](https://GitHub.com/Jheeebert/readme-generator/commit/)
   [![GitHub forks](https://img.shields.io/github/forks/Jheeebert/readme-generator.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Jheeebert/readme-generator/network/)
   <br>
+
+  ## Preview
+
+  <video src="assets/images/Screencastify/readme-generator-preview.mp4" controls title="Title"></video>
   
   ## Questions ☎️💻📱
   If you have any questions about the repo, open an issue or contact me directly at 📧 wdfuzz8823@gmail.com 📧. <br>
