@@ -37,8 +37,7 @@
 
   ## Preview
 
-  <video src="assets/images/Screencastify/readme-generator-preview.mp4" controls title="Title"></video>
-  
+  ![Alt text](<assets/images/README image.gif>)
   ## Questions ☎️💻📱
   If you have any questions about the repo, open an issue or contact me directly at 📧 wdfuzz8823@gmail.com 📧. <br>
   You can find more of my work at 🔖 [Jheeebert](https://github.com/Jheeebert/) 🔖. 
